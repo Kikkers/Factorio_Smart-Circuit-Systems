@@ -19,7 +19,8 @@ Stuff to know / how to use / what hacks were used:
 + Don't mind the yellow junk inside the pump selection box. That's just the hidden inserter putting items from the hidden chest into the hidden chest (if you must ask, check the code). 
 
 Version history:
-- 0.1
+
+0.1.1
 + Recipes are one iron plate for both items. (For testing purposes or the impatient)
 + Unlocked from start (you still need red/green wires tho).
 + Not yet rigorously tested, some crashing bugs may still exist.
