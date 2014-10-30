@@ -10,7 +10,7 @@ Mod for factorio that adds two items, both usable as elements of the circuit net
 For the impatient though, because official factorio development will likely eventually include exactly the contents of this mod (although significantly less hack-y)
 
 Install instructions:
-Copy the "smart-fluid" folder into the mods folder. The mods folder is created after running Factorio once. After copying, restart Factorio and open mods in the main menu, you should see the mod already enabled there.
+Copy the "Smart-Fluid_..." folder into the mods folder. The mods folder is created after running Factorio once. After copying, restart Factorio and open mods in the main menu, you should see the mod already enabled there.
 
 Stuff to know / how to use / what hacks were used: 
 + The smart tank creates dummy items according to the fluid temperature and volume. They stack up to 1000, which means 10.0 volume or 100.0 temperature. Use these as wire conditions in the circuit network.
