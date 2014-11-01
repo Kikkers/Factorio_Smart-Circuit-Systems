@@ -1,9 +1,0 @@
-{
-  "name": "Smart-Fluid",
-  "version": "0.1.1",
-  "title": "Smart Fluid Mod",
-  "author": "Kikkers",
-  "homepage": "https://github.com/Kikkers/Factorio-Mod_Smart-Fluid",
-  "description": "Mod for factorio that adds two items, both usable as elements of the circuit network: (1) A sensor for the contents of a pipe. (2) A pump that works on a wire condition.",
-  "dependencies": ["base"]
-}
