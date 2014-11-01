@@ -1,11 +1,11 @@
 Factorio: Smart Fluid Mod
 =========================
 
-Tested to work with Factorio v0.10.12
+Tested to work with Factorio v0.11.1 (No longer compatible with v0.10.12, though if you ask nicely, I can make a branch)
 
 Mod for factorio that adds two items, both usable as elements of the circuit network: 
 + A sensor for the contents of a pipe.
-+ A pump that works on a wire condition. 
++ A pump that works on a wire condition.
 
 For the impatient though, because official factorio development will likely eventually include exactly the contents of this mod (although significantly less hack-y)
 
@@ -20,6 +20,10 @@ Stuff to know / how to use / what hacks were used:
 
 Version history:
 
+0.1.2
++ Support for v0.11.1
++ Recipes modified to more conventional requirements
+	
 0.1.1
 + Recipes are one iron plate for both items. (For testing purposes or the impatient)
 + Unlocked from start (you still need red/green wires tho).
