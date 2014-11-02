@@ -2,7 +2,7 @@ data:extend({
 {  
 	type = "inserter",
 	name = "smart-pump-actuator",
-	icon = "__Smart-Fluid__/graphics/smart-pump-actuator-icon.png",
+	icon = "__Smart-Circuit-Systems__/graphics/smart-pump-actuator-icon.png",
 	minable = {hardness = 0.2, mining_time = 0.5, result = "smart-pump"},
 	max_health = 1,
 	--collision_box = {{-0.29, -0.29}, {0.29, 0.29}},
@@ -21,17 +21,17 @@ data:extend({
 	extension_speed = 0.7,
 	programmable = true,
 	rotation_speed = 0.35,
-	hand_base_picture = { filename = "__Smart-Fluid__/graphics/smart-pump-actuator.png", width = 0, height = 0 },
-	hand_closed_picture = { filename = "__Smart-Fluid__/graphics/smart-pump-actuator.png", width = 0, height = 0 },
-	hand_open_picture = { filename = "__Smart-Fluid__/graphics/smart-pump-actuator.png", width = 0, height = 0 },
-	hand_base_shadow = { filename = "__Smart-Fluid__/graphics/smart-pump-actuator.png", width = 0, height = 0 },
-	hand_closed_shadow = { filename = "__Smart-Fluid__/graphics/smart-pump-actuator.png", width = 0, height = 0 },
-	hand_open_shadow = { filename = "__Smart-Fluid__/graphics/smart-pump-actuator.png", width = 0, height = 0 },
+	hand_base_picture = { filename = "__Smart-Circuit-Systems__/graphics/smart-pump-actuator.png", width = 0, height = 0 },
+	hand_closed_picture = { filename = "__Smart-Circuit-Systems__/graphics/smart-pump-actuator.png", width = 0, height = 0 },
+	hand_open_picture = { filename = "__Smart-Circuit-Systems__/graphics/smart-pump-actuator.png", width = 0, height = 0 },
+	hand_base_shadow = { filename = "__Smart-Circuit-Systems__/graphics/smart-pump-actuator.png", width = 0, height = 0 },
+	hand_closed_shadow = { filename = "__Smart-Circuit-Systems__/graphics/smart-pump-actuator.png", width = 0, height = 0 },
+	hand_open_shadow = { filename = "__Smart-Circuit-Systems__/graphics/smart-pump-actuator.png", width = 0, height = 0 },
 	platform_picture =
 	{
 		sheet=
 		{
-			filename = "__Smart-Fluid__/graphics/smart-pump-actuator.png",
+			filename = "__Smart-Circuit-Systems__/graphics/smart-pump-actuator.png",
 			priority = "extra-high",
 			width = 32,
 			height = 39,
@@ -45,11 +45,12 @@ data:extend({
 {
 	type = "pump",
 	name = "smart-pump-pipe",
-	icon = "__Smart-Fluid__/graphics/smart-pump-icon.png",
+	icon = "__Smart-Circuit-Systems__/graphics/smart-pump-icon.png",
 	flags = {"placeable-neutral", "placeable-player", "player-creation"},
 	minable = {hardness = 0.2, mining_time = 0.5, result = "smart-pump"},
 	fast_replaceable_group = "pipe",
 	max_health = 60,
+	corpse = "small-remnants",
 	collision_box = {{-0.29, -0.29}, {0.29, 0.29}},
 	selection_box = {{-0.25, -0.25}, {0.25, 0.25}},
 	fluid_box =
@@ -73,7 +74,7 @@ data:extend({
 	{
 		north =
 		{
-			filename = "__Smart-Fluid__/graphics/smart-pump-up.png",
+			filename = "__Smart-Circuit-Systems__/graphics/smart-pump-up.png",
 			width = 46,
 			height = 56,
 			frame_count = 8,
@@ -82,7 +83,7 @@ data:extend({
 		},
 		east =
 		{
-			filename = "__Smart-Fluid__/graphics/smart-pump-right.png",
+			filename = "__Smart-Circuit-Systems__/graphics/smart-pump-right.png",
 			width = 51,
 			height = 56,
 			frame_count = 8,
@@ -91,7 +92,7 @@ data:extend({
 		},
 		south =
 		{
-			filename = "__Smart-Fluid__/graphics/smart-pump-down.png",
+			filename = "__Smart-Circuit-Systems__/graphics/smart-pump-down.png",
 			width = 61,
 			height = 58,
 			frame_count = 8,
@@ -100,31 +101,13 @@ data:extend({
 		},
 		west =
 		{
-			filename = "__Smart-Fluid__/graphics/smart-pump-left.png",
+			filename = "__Smart-Circuit-Systems__/graphics/smart-pump-left.png",
 			width = 56,
 			height = 52,
 			frame_count = 8,
 			shift = {0.3125, 0.0625},
 			animation_speed = 0.5
 		}
-	}
-},
-
-
-
-{
-	type = "container",
-	name = "smart-pump-chest",
-	max_health = 10000,
-	collision_box = {{-0.1, -0.1}, {0.1, 0.1}},
-	--selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
-	inventory_size = 1,
-	picture =
-	{
-		filename = "__Smart-Fluid__/graphics/smart-pump-actuator.png",
-		priority = "extra-high",
-		width = 0,
-		height = 0,
 	}
 },
 
