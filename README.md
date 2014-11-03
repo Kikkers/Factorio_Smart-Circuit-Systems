@@ -17,10 +17,9 @@ Install instructions:
 Copy the "Smart-Circuit_Systems_..." folder into the mods folder. The mods folder is created after running Factorio once. After copying, restart Factorio and open mods in the main menu, you should see the mod already enabled there.
 
 Stuff to know / how to use / what hacks were used: 
-+ Smart tanks and smart accumulators create dummy items representing their measurements. All dummy items stack up to 1000, which is the maximum of the respective measurement.
++ Smart tanks and smart accumulators create dummy items representing their measurements. All dummy items stack up to 1000, which is the maximum of the sensor's respective measurements.
 + The pump and electric switch have multiple selection boxes. Connect red or green wires to the selection box that shows the yellow junk, in order to allow setting the circuit conditions. 
 + The electric switch has two additional terminals on which you can connect wires (copper, red or green), through which you can control what signals or power is passed on.
-+ You can remove items from the hidden chest overlapping the pump and electric switch with an inserter. Don't do this. It's not currently possible to prevent it in code.
 + Concerning the yellow junk inside the pump selection box, ignore it. That's just the hidden inserter putting items from the hidden chest into the hidden chest (if you must ask, check the code). 
 
 Known issues:
@@ -28,6 +27,11 @@ Known issues:
 
 Version history:
 
+0.2.1
++ Added technologies for the objects. Required tech is fluid handling, advanced electronics, electric energy distribution
++ Improved the way circuit conditions are checked (not using a hidden chest anymore, but the yellow junk has to stay for now)
++ Backwards compatible with 0.2.0 (cleans up redundant items from saves using 0.2.0)
+	
 0.2.0
 + Added smart accumulator and electric switch
 + Modified art for smart tank
