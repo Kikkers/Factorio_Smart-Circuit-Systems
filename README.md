@@ -1,15 +1,16 @@
 Factorio: Smart-Circuit-Systems
 =========================
 
-Tested to work with Factorio v0.11.3
+Tested to work with Factorio v0.11.3 (will likely work for v0.11.x as well)
 
-Mod for factorio that (currently) adds four items, all capable of interacting with the circuit network: 
+Mod for factorio that (currently) adds five items, all capable of interacting with the circuit network: 
 + A device that can switch most machines on or off on a wire condition.
 + A wire switcher that works on a wire condition.
 + A sensor for the contents of a pipe.
 + A sensor for the charge of an accumulator.
++ A sensor for items lying on the ground and the contents of nearby (primitive) inventories. 
 
-This mod is for the impatient, because official factorio development will likely eventually include exactly the contents of this mod in the next major version update (although significantly less hack-y)
+This mod is for the impatient, because official factorio development will likely eventually include at least some the contents of this mod in the next major version update (and probably less hack-y)
 
 Install instructions:
 Copy the "Smart-Circuit_Systems_..." folder into the mods folder. The mods folder is created after running Factorio once. After copying, restart Factorio and open mods in the main menu, you should see the mod already enabled there.
@@ -18,12 +19,15 @@ Stuff to know / how to use / what hacks were used:
 + Smart tanks and smart accumulators create dummy items representing their measurements. All dummy items stack up to 1000, which is the maximum of the sensor's respective measurements.
 + The switching behavior of the omni actuator and electric switch accept red and green wires, be sure to attach the wire to the yellow selection box that show inserter arrows.
 + The electric switch has two additional terminals on which you can connect wires (copper, red or green), through which you can control what signals or power is passed on.
-+ Concerning the yellow junk inside the pump selection box, ignore it. That's just the hidden inserter checking the circuit condition. 
++ The item sensor range has a 1 tile sensing radius, so it can detect items on adjacent belts. Concerning detecting inventories, only a select few types of inventories can be detected from, including basic chests (not smart or logistic chests), cargo wagons, locomotives and cars.
 
 Known issues:
-+ None at the moment
++ Item sensor is unable to just iterate over the number of inventories of an entity, which is the main reason the item sensor has a limited set of possible container types to scan from.
 
 Version history:
+
+0.3.2
++ Added the item sensor for types: item-entity, container, cargo-wagon, car, locomotive
 
 0.3.1
 + Omni actuator doesn't crash on controlling trains.
