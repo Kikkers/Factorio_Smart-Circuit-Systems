@@ -25,6 +25,9 @@ Known issues:
 
 Version history:
 
+0.3.1
++ Omni actuator doesn't crash on controlling trains.
+
 0.3.0
 + Added the omni actuator
 + Removed the smart pump, instead you can use an omni actuator on a normal small pump.
