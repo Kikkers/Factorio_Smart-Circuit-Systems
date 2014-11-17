@@ -3,11 +3,12 @@ Factorio: Smart-Circuit-Systems
 
 Tested to work with Factorio v0.11.3 (will likely work for v0.11.x as well)
 
-Mod for factorio that (currently) adds five items, all capable of interacting with the circuit network: 
+Mod for factorio that (currently) adds six items, all capable of interacting with the circuit network: 
 + A device that can switch most machines on or off on a wire condition.
 + A wire switcher that works on a wire condition.
 + A sensor for the contents of a pipe.
 + A sensor for the charge of an accumulator.
++ An electric pulse sensor, which detects the instant the connected power network switches from charging to discharging, and vice versa.
 + A sensor for items lying on the ground and the contents of nearby (primitive) inventories. 
 
 This mod is for the impatient, because official factorio development will likely eventually include at least some the contents of this mod in the next major version update (and probably less hack-y)
@@ -20,12 +21,16 @@ Stuff to know / how to use / what hacks were used:
 + The switching behavior of the omni actuator and electric switch accept red and green wires, be sure to attach the wire to the yellow selection box that show inserter arrows.
 + The electric switch has two additional terminals on which you can connect wires (copper, red or green), through which you can control what signals or power is passed on.
 + The item sensor range has a 1 tile sensing radius, so it can detect items on adjacent belts. Concerning detecting inventories, only a select few types of inventories can be detected from, including basic chests (not smart or logistic chests), cargo wagons, locomotives and cars.
++ The pulse sensor is equivalent to the smart accumulator, but is limited to 1 charge unit, giving it a binary behavior. Large charge/discharge values makes it react almost instantly to changes in the connected network.
 
 Known issues:
 + Item Sensor is unable to just iterate over the number of inventories of an entity, which is the main reason the item sensor has a limited set of possible container types to scan from.
 + Smart Tank will, on death or being mined, fail to disconnect the circuit wire. Appears to be limited to visuals, rebuilding restores the connection without errors.
 
 Version history:
+
+0.3.4
++ Added the pulse sensor
 
 0.3.3
 + Fixed a bug in all sensors that failed to clear the network-visible items of the red or green circuit networks. Cause was the use of inventory.clear() which apparently doesn't clear the items of the connected network.
