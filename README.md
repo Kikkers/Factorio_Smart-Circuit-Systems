@@ -22,9 +22,13 @@ Stuff to know / how to use / what hacks were used:
 + The item sensor range has a 1 tile sensing radius, so it can detect items on adjacent belts. Concerning detecting inventories, only a select few types of inventories can be detected from, including basic chests (not smart or logistic chests), cargo wagons, locomotives and cars.
 
 Known issues:
-+ Item sensor is unable to just iterate over the number of inventories of an entity, which is the main reason the item sensor has a limited set of possible container types to scan from.
++ Item Sensor is unable to just iterate over the number of inventories of an entity, which is the main reason the item sensor has a limited set of possible container types to scan from.
++ Smart Tank will, on death or being mined, fail to disconnect the circuit wire. Appears to be limited to visuals, rebuilding restores the connection without errors.
 
 Version history:
+
+0.3.3
++ Fixed a bug in all sensors that failed to clear the network-visible items of the red or green circuit networks. Cause was the use of inventory.clear() which apparently doesn't clear the items of the connected network.
 
 0.3.2
 + Added the item sensor for types: item-entity, container, cargo-wagon, car, locomotive
