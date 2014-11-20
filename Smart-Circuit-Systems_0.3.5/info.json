@@ -1,0 +1,9 @@
+{
+  "name": "Smart-Circuit-Systems",
+  "version": "0.3.5",
+  "title": "Smart Circuit Systems Mod",
+  "author": "Kikkers",
+  "homepage": "https://github.com/Kikkers/Factorio_Smart-Circuit-Systems/",
+  "description": "Mod for factorio that adds more smart items for use with the circuit network.",
+  "dependencies": ["base"]
+}

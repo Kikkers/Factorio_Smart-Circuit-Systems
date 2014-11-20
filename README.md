@@ -14,11 +14,11 @@ Mod for factorio that (currently) adds six items, all capable of interacting wit
 This mod is for the impatient, because official factorio development will likely eventually include at least some the contents of this mod in the next major version update (and probably less hack-y)
 
 Install instructions:
-Copy the "Smart-Circuit_Systems_..." folder into the mods folder. The mods folder is created after running Factorio once. After copying, restart Factorio and open mods in the main menu, you should see the mod already enabled there.
+No special requirements here, just copy the "Smart-Circuit_Systems_..." folder into the mods folder. The mods folder is created after running Factorio once. After copying, restart Factorio and open mods in the main menu, you should see the mod already enabled there.
 
 Stuff to know / how to use / what hacks were used: 
 + Smart tanks and smart accumulators create dummy items representing their measurements. All dummy items stack up to 1000, which is the maximum of the sensor's respective measurements.
-+ The switching behavior of the omni actuator and electric switch accept red and green wires, be sure to attach the wire to the yellow selection box that show inserter arrows.
++ The switching behavior of the omni actuator and electric switch accept red and green wires, be sure to attach the wire to the yellow selection box that shows inserter arrows.
 + The electric switch has two additional terminals on which you can connect wires (copper, red or green), through which you can control what signals or power is passed on.
 + The item sensor range has a 1 tile sensing radius, so it can detect items on adjacent belts. Concerning detecting inventories, only a select few types of inventories can be detected from, including basic chests (not smart or logistic chests), cargo wagons, locomotives and cars.
 + The pulse sensor is equivalent to the smart accumulator, but is limited to 1 charge unit, giving it a binary behavior. Large charge/discharge values makes it react almost instantly to changes in the connected network.
@@ -26,8 +26,12 @@ Stuff to know / how to use / what hacks were used:
 Known issues:
 + Item Sensor is unable to just iterate over the number of inventories of an entity, which is the main reason the item sensor has a limited set of possible container types to scan from.
 + Smart Tank will, on death or being mined, fail to disconnect the circuit wire. Appears to be limited to visuals, rebuilding restores the connection without errors.
++ All sensors (item sensor, smart tank, smart accumulator, pulse sensor) can have their contents modified using inserters like they were chests. This is unintended, but unavoidable (AFAIK), because there seems to be no way to prevent inserters from functioning on specific chests.
 
 Version history:
+
+0.3.5
++ Optimized some code all round to gain performance. Item sensor and omni actuator remain somewhat expensive to simulate still, as they depend on finding potentially moving objects.
 
 0.3.4
 + Added the pulse sensor
