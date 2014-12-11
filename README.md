@@ -1,7 +1,7 @@
 Factorio: Smart-Circuit-Systems
 =========================
 
-Tested to work with Factorio v0.11.3 (will likely work for v0.11.x as well)
+Tested to work with Factorio v0.11.3 - v0.11.6 (will likely work for v0.11.x as well)
 
 Mod for factorio that (currently) adds six items, all capable of interacting with the circuit network: 
 + A device that can switch most machines on or off on a wire condition.
@@ -24,11 +24,15 @@ Stuff to know / how to use / what hacks were used:
 + The pulse sensor is equivalent to the smart accumulator, but is limited to 1 charge unit, giving it a binary behavior. Large charge/discharge values makes it react almost instantly to changes in the connected network.
 
 Known issues:
++ From v0.11.6 onwards, you can't reliably connect a red or green wire from the electric pole nodes to a smart inserter or actuator. You would need to run the wire to a normal pole first to bypass this issue.
 + Item Sensor is unable to just iterate over the number of inventories of an entity, which is the main reason the item sensor has a limited set of possible container types to scan from.
-+ Smart Tank will, on death or being mined, fail to disconnect the circuit wire. Appears to be limited to visuals, rebuilding restores the connection without errors.
++ Smart Tank will, on death or being mined, fail to disconnect the circuit wire. Appears to be limited to visuals, rebuilding restores the connection without errors. (could be only on ghost objects though)
 + All sensors (item sensor, smart tank, smart accumulator, pulse sensor) can have their contents modified using inserters like they were chests. This is unintended, but unavoidable (AFAIK), because there seems to be no way to prevent inserters from functioning on specific chests.
 
 Version history:
+
+0.3.6
++ Added an extra safeguard when removing the omni actuator, should prevent the previously removed target entity from being accessed
 
 0.3.5
 + Optimized some code all round to gain performance. Item sensor and omni actuator remain somewhat expensive to simulate still, as they depend on finding potentially moving objects.
