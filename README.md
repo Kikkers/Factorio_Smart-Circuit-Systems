@@ -1,7 +1,9 @@
 Factorio: Smart-Circuit-Systems
 =========================
 
-Tested to work with Factorio v0.11.3 - v0.11.6 (will likely work for v0.11.x as well)
+Tested to work with Factorio v0.11.7 (will likely work for v0.11.x as well)
+
+Warning: Any saves made with mod version 0.3.6 in combination with Factorio 0.11.7 could be corrupted. If you can't load a save for this reason, you could wait until 0.11.8 which might fix this from the Factorio side. More information once it's out.
 
 Mod for factorio that (currently) adds six items, all capable of interacting with the circuit network: 
 + A device that can switch most machines on or off on a wire condition.
@@ -11,7 +13,7 @@ Mod for factorio that (currently) adds six items, all capable of interacting wit
 + An electric pulse sensor, which detects the instant the connected power network switches from charging to discharging, and vice versa.
 + A sensor for items lying on the ground and the contents of nearby (primitive) inventories. 
 
-This mod is for the impatient, because official factorio development will likely eventually include at least some the contents of this mod in the next major version update (and probably less hack-y)
+This mod is for the impatient, because official Factorio development will likely eventually include at least some the contents of this mod in the next major version update (and probably less hack-y)
 
 Install instructions:
 No special requirements here, just copy the "Smart-Circuit_Systems_..." folder into the mods folder. The mods folder is created after running Factorio once. After copying, restart Factorio and open mods in the main menu, you should see the mod already enabled there.
@@ -30,6 +32,9 @@ Known issues:
 + All sensors (item sensor, smart tank, smart accumulator, pulse sensor) can have their contents modified using inserters like they were chests. This is unintended, but unavoidable (AFAIK), because there seems to be no way to prevent inserters from functioning on specific chests.
 
 Version history:
+
+0.3.7
++ Modified a few prototypes to have no grid alignment. Works around a nasty bug that came from the number format change in 0.11.7
 
 0.3.6
 + Added an extra safeguard when removing the omni actuator, should prevent the previously removed target entity from being accessed
