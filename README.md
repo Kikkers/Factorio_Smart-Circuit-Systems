@@ -1,9 +1,7 @@
 Factorio: Smart-Circuit-Systems
 =========================
 
-Tested to work with Factorio v0.11.7 (will likely work for v0.11.x as well)
-
-Warning: Any saves made with mod version 0.3.6 in combination with Factorio 0.11.7 could be corrupted. If you can't load a save for this reason, you could wait until 0.11.8 which might fix this from the Factorio side. More information once it's out.
+Tested to work with Factorio v0.11.8 (will likely work for v0.11.x as well)
 
 Mod for factorio that (currently) adds six items, all capable of interacting with the circuit network: 
 + A device that can switch most machines on or off on a wire condition.
