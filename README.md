@@ -1,15 +1,20 @@
 Factorio: Smart-Circuit-Systems
 =========================
 
-Tested to work with Factorio v0.11.8 (will likely work for v0.11.x as well)
-
 Mod for factorio that (currently) adds six items, all capable of interacting with the circuit network: 
 + A device that can switch most machines on or off on a wire condition.
 + A wire switcher that works on a wire condition.
 + A sensor for the contents of a pipe.
 + A sensor for the charge of an accumulator.
 + An electric pulse sensor, which detects the instant the connected power network switches from charging to discharging, and vice versa.
-+ A sensor for items lying on the ground and the contents of nearby (primitive) inventories. 
++ A sensor for items lying on the ground and the contents of nearby (primitive) inventories, such as chests and train wagons. 
+
+What can you do with this mod? A few examples:
++ Set up a train station that waits for full or empty wagons before the train can leave.
++ Set up backup steam power to activate on low power
++ Disable sections of your factory
++ Wire based logic gates
++ Fluid based logic gates (this would be a challenge)
 
 This mod is for the impatient, because official Factorio development will likely eventually include at least some the contents of this mod in the next major version update (and probably less hack-y)
 
@@ -30,6 +35,14 @@ Known issues:
 + All sensors (item sensor, smart tank, smart accumulator, pulse sensor) can have their contents modified using inserters like they were chests. This is unintended, but unavoidable (AFAIK), because there seems to be no way to prevent inserters from functioning on specific chests.
 
 Version history:
+
+0.3.8 
+(Thanks to pyrolytic_tungsten and zaubara for these fixes)
++ Entities created are no longer of the enemy force.
++ Actuators will properly deactivate newly built targets without state change.
++ Actuators don't forget about trains (when the train left the actuator would set its target to the rail and since the rail would never move or get destroyed it would never go back to the train).
++ Actuators don't mess with moving trains (don't want to stop short of the train stop).
++ Fix for 0.11.10 from zaubara (architectural changes of the coordinate system required different positional settings).
 
 0.3.7
 + Modified a few prototypes to have no grid alignment. Works around a nasty bug that came from the number format change in 0.11.7
