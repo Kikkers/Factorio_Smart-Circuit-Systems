@@ -1,8 +1,8 @@
 -- initialization functions
 
-function InitBattery(batteryPart)
+function InitBattery(batteryPart, event)
 	local pos = batteryPart.position
-	local chestPart = game.createentity{name = "smart-battery-chest", position = {x=pos.x+0.001, y=pos.y+0.001}, force = game.forces.player}
+	local chestPart = game.createentity{name = "smart-battery-chest", position = {x=pos.x+0.001, y=pos.y+0.001}, force = event.player.force}
 	chestPart.destructible = false
 	chestPart.operable = false
 	

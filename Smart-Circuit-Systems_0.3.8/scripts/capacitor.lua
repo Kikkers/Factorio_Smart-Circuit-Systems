@@ -1,8 +1,8 @@
 -- initialization functions
 
-function InitCapacitor(chestPart)
+function InitCapacitor(chestPart, event)
 	local pos = chestPart.position
-	local batteryPart = game.createentity{name = "capacitor-battery", position = pos, force = game.forces.player}
+	local batteryPart = game.createentity{name = "capacitor-battery", position = pos, force = event.player.force}
 	batteryPart.destructible = false
 	chestPart.operable = false
 	

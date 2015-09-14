@@ -42,7 +42,7 @@ onbuiltentityHandler = {
 }
 game.onevent(defines.events.onbuiltentity, function(event)
 	local func = onbuiltentityHandler[event.createdentity.name]
-	if func ~= nil then func(event.createdentity) end
+	if func ~= nil then func(event.createdentity, event) end
 end)
 
 game.onevent(defines.events.onrobotbuiltentity, function(event)
