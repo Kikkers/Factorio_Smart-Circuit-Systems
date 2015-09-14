@@ -1,8 +1,8 @@
 -- initialization functions
 
-function InitActuator(actuator)
+function InitActuator(actuator, event)
 	local pos = actuator.position
-	game.createentity{name = "actuator-greenlamp", position = pos, force = game.forces.player}
+	game.createentity{name = "actuator-greenlamp", position = pos, force = event.player.force}
 	
 	Insert(glob.allActuators, pos, actuator)
 	LoadActuator(actuator)

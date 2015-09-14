@@ -1,8 +1,8 @@
 -- initialization functions
 
-function InitTank(chestPart)
+function InitTank(chestPart, event)
 	local pos = chestPart.position
-	local pipePart = game.createentity{name = "smart-tank-pipe", position = pos, force = game.forces.player}
+	local pipePart = game.createentity{name = "smart-tank-pipe", position = pos, force = event.player.force}
 	pipePart.destructible = false
 	chestPart.operable = false
 	chestPart.active = false

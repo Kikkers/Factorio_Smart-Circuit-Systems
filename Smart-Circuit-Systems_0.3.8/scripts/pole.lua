@@ -1,12 +1,12 @@
 -- initialization functions
 
-function InitPole(actuator)
+function InitPole(actuator, event)
 	local pos = actuator.position
 	
 	local poleA
 	local poleB
 	if IsVertical(actuator) then
-		game.createentity{name = "smart-pole-deco-vertical", position = pos, force = game.forces.player}
+		game.createentity{name = "smart-pole-deco-vertical", position = pos, force = event.player.force}
 		poleA = game.createentity{name = "south-node", position = {x = pos.x, y = pos.y + 1}, force = game.forces.player}
 		poleB = game.createentity{name = "north-node", position = {x = pos.x, y = pos.y - 1}, force = game.forces.player}
 	else
